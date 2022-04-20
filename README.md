@@ -21,4 +21,4 @@ Connect to H2 console using: http://localhost:9001/h2-console
 (Steps required to run the service in docker)
 1. Use gradle -> build to build the jar file for the OrderService
 2. Run "docker build --build-arg JAR_FILE=build/libs/Order-Service-0.0.1-SNAPSHOT.jar -t scalable-services/order-service-spring-boot-docker ." command in the terminal to create the docker image for order service
-3. Run "docker run -p 9001:90001 -t scalable-services/order-service-spring-boot-docker" command to run the docker image which was created in previous step
+3. Run "docker run -p 9001:9001 -t scalable-services/order-service-spring-boot-docker" command to run the docker image which was created in previous step
