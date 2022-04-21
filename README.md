@@ -22,3 +22,9 @@ Connect to H2 console using: http://localhost:9001/h2-console
 1. Use gradle -> build to build the jar file for the OrderService
 2. Run "docker build --build-arg JAR_FILE=build/libs/Order-Service-0.0.1-SNAPSHOT.jar -t scalable-services/order-service-spring-boot-docker ." command in the terminal to create the docker image for order service
 3. Run "docker run -p 9001:9001 -t scalable-services/order-service-spring-boot-docker" command to run the docker image which was created in previous step
+
+**MINIKUBE SETUP**
+1. Start minikube command: "minikube start"
+2. Build docker image command: "minikube image build order"
+3. Run deployment.yaml file command: "kubectl apply -f deployment.yaml"
+4. Run the image in port command: "kubectl port-forward deployment/order 9001:9001"
